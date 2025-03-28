@@ -1,8 +1,26 @@
 <html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>a</p>
-    </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>Scan QR</title>
+<style type="text/css">
+img{ border:0; }
+#qr-canvas{ display:none; }
+</style>
+<script type="text/javascript" src="webqr.js"></script>
+<script type="text/javascript" src="llqrcode.js"></script>
+</head>
+<body>
+<div id="header">QR Code scanner</div>
+<div id="result"></div>
+<div id="mainbody">
+<table class="tsel">
+<tr><td><img class="selector" id="webcamimg" onclick="setwebcam()"/></td>
+<td><img class="selector" id="qrimg" onclick="setimg()"/></td></tr>
+<tr><td><div id="outdiv"></div></td></tr></table>
+</div>
+<canvas id="qr-canvas" width="800" height="600"></canvas>
+<script type="text/javascript">load();</script>
+</body>
 </html>
